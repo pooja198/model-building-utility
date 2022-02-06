@@ -1,0 +1,48 @@
+#INITIAL SETTINGS
+data_directory: data
+data_name: iris.csv
+drop_columns: ["Id"]
+target_name: Species
+test_size: 0.2
+model_directory: models
+encode_data: True
+model_name: KNN
+model_file_name: KNN.pkl
+metric_file_name: Metrics.csv
+
+#kNN parameters
+KNN:
+  n_neighbors: 5
+  weights: uniform
+  algorithm: auto
+  leaf_size: 15
+  p: 2
+  metric: minkowski
+  n_jobs: 1
+
+#Logistic Regression parameters
+
+LogisticRegression:
+  penalty : l2
+  dual : False
+  tol : 0.0001
+  C : 1.0
+  multi_class : auto
+
+
+#Decision Tree parameters
+DecisionTree:
+  criterion : gini
+  splitter : best
+  min_samples_split : 2
+  min_samples_leaf : 1
+  min_weight_fraction_leaf : 0.0
+  ccp_alpha : 0.0
+
+
+#SVM parameters
+SVM:
+  C : 1.0
+  kernel : rbf
+  degree : 3
+  gamma : scale
